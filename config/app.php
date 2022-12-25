@@ -107,7 +107,6 @@ return [
     */
 
     'faker_locale' => 'en_US',
-
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
@@ -118,7 +117,8 @@ return [
     | will not be safe. Please do this before deploying an application!
     |
     */
-
+    'airtable_base_id' => env('AIRTABLE_BASE_ID'),
+    'airtable_key' => env('AIRTABLE_KEY'),
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
@@ -174,7 +174,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        \App\Providers\RepositoryServiceProvider::class
     ],
 
     /*
